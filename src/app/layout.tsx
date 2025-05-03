@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={fontSans.variable}>
-        <ClientBody>{children}</ClientBody>
+      <div className="client-body">{children}</div>
       </body>
     </html>
   );

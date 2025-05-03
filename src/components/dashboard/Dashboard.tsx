@@ -65,30 +65,30 @@ export function Dashboard() {
   // Handle waste type filtering
   useEffect(() => {
     if (data.length === 0) return;
-
-    // Create a copy of the data and update values based on selected waste type
-    const mappedData = data.map((item) => {
-      const copy = { ...item };
-
-      if (activeWasteType === "household") {
-        copy.combinedFigures = item.householdEstimatePerCapita;
-      } else if (activeWasteType === "retail") {
-        copy.combinedFigures = item.retailEstimatePerCapita;
-      } else if (activeWasteType === "foodService") {
-        copy.combinedFigures = item.foodServiceEstimatePerCapita;
-      }
-      // If 'combined', keep the original combinedFigures
-
-      return copy;
-    });
-
-    setWasteTypeData(mappedData);
-  }, [data, activeWasteType]);
-
-  useEffect(() => {
-    const dataToFilter = activeWasteType === "combined" ? data : wasteTypeData;
+    
+    // First, create the mapped data based on waste type
+    let dataToFilter;
+    
+    if (activeWasteType === "combined") {
+      dataToFilter = data;
+    } else {
+      // Map the data based on activeWasteType
+      dataToFilter = data.map((item) => {
+        const copy = { ...item };
+        if (activeWasteType === "household") {
+          copy.combinedFigures = item.householdEstimatePerCapita;
+        } else if (activeWasteType === "retail") {
+          copy.combinedFigures = item.retailEstimatePerCapita;
+        } else if (activeWasteType === "foodService") {
+          copy.combinedFigures = item.foodServiceEstimatePerCapita;
+        }
+        return copy;
+      });
+    }
+    
+    // Then filter the data
     setFilteredData(filterData(dataToFilter, filterOptions));
-  }, [data, wasteTypeData, filterOptions, activeWasteType]);
+  }, [data, activeWasteType, filterOptions]);
 
   const handleRegionFilterChange = (region: string | null) => {
     setFilterOptions((prev) => ({
