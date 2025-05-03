@@ -2,8 +2,6 @@
 
 A comprehensive data visualization application for analyzing and exploring global food waste statistics across different countries and regions.
 
-![Dashboard Preview](./public/dashboard-preview.png)
-
 ## Overview
 
 This interactive dashboard provides insights into food waste data from countries around the world, allowing users to:
