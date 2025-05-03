@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Global Food Waste Dashboard
+
+A comprehensive data visualization application for analyzing and exploring global food waste statistics across different countries and regions.
+
+![Dashboard Preview](./public/dashboard-preview.png)
+
+## Overview
+
+This interactive dashboard provides insights into food waste data from countries around the world, allowing users to:
+
+- Explore food waste statistics by country and region
+- Compare waste across different sectors (household, retail, food service)
+- Analyze trends over time
+- Visualize regional differences and patterns
+- Export data for further analysis
+
+The dashboard features an AI-powered chat assistant that helps users navigate the application and extract insights from the data through natural language queries.
+
+## Features
+
+- **Multiple Visualization Types**: Bar charts, pie charts, line graphs, and data tables
+- **Interactive Filtering**: Filter by region, waste amount, and waste source type
+- **Country Comparison**: Compare up to 8 countries side-by-side
+- **Trend Analysis**: View how food waste has changed over time (simulated historical data)
+- **Voice Navigation**: Control the dashboard using voice commands
+- **AI Assistant**: Natural language interface for querying the data
+- **Data Export**: Download data in CSV or PDF format
+- **Responsive Design**: Works across desktop and mobile devices
+
+## Technology Stack
+
+- **Frontend**: Next.js 15 with React 18, TypeScript
+- **Styling**: Tailwind CSS with shadcn/ui components
+- **Data Visualization**: Chart.js with react-chartjs-2
+- **Voice Recognition**: Web Speech API
+- **Markdown Rendering**: Marked
+- **Export Functionality**: jsPDF, file-saver
+- **Icons**: Lucide React, React Icons
+- **UI Enhancements**: Sonner for toast notifications
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js 16.8+ or Bun 1.0+
+- npm, yarn, pnpm, or bun package manager
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clone the repository
+   ```bash
+   git clone https://github.com/yourusername/food-waste-dashboard.git
+   cd food-waste-dashboard
