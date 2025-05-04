@@ -159,7 +159,8 @@ export function ChatBot({
                 <div
                   className="prose prose-sm dark:prose-invert"
                   dangerouslySetInnerHTML={{
-                    __html: marked(message.content, { breaks: true }),
+                    __html: await marked.parse(message.content, { breaks: true }) as string,
+
                   }}
                 />
               </div>
